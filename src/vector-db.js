@@ -46,7 +46,7 @@ async function checkIndexExists() {
   // List all indexes
   const response = await pc.listIndexes();
   const indexes = response.indexes;
-  console.log('Available indexes:', indexes)
+  console.log('Pinecone has these indexes:', indexes)
 
   // Check if the desired index is in the list
   return indexes.find(item => item.name === DB_INDEX);
@@ -70,9 +70,6 @@ async function retrieveRelevantChunks(query, namespace = NAMESPACE) {
   });
   return results.matches.map(match => match.metadata.chunk);
 }
-
-// Storing embeddings in Pinecone
-// await storeEmbeddings(embeddings, 'your-namespace');
 
 module.exports = {
   storeEmbeddings,

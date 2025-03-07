@@ -49,7 +49,7 @@ const main = async () => {
 
   // Function to prompt the user and handle the query
   const promptUser = () => {
-    rl.question('Enter your query (type "quit"): ', async query => {
+    rl.question('What is your query about Treebo ? (type "quit" to quit): ', async query => {
       if (query.toLowerCase() === 'quit') {
         console.log('Exiting...');
         rl.close();
