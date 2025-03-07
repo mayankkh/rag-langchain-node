@@ -1,5 +1,17 @@
 ## Introduction
 
+Retrieval-Augmented Generation (RAG) is a technique used to enhance the capabilities of large language models (LLMs) by integrating them with external knowledge bases. This approach combines the generative power of LLMs with the precision of specialized data search mechanisms, allowing for more accurate and relevant responses to user queries.
+
+Key Components of RAG:
+
+- Indexing: The data to be referenced is converted into numerical representations (embeddings) and stored in a vector database for efficient retrieval1.
+
+- Retrieval: Given a user query, a document retriever selects the most relevant documents from the indexed data1.
+
+- Augmentation: The retrieved information is incorporated into the LLM via prompt engineering to enhance the query1.
+
+- Generation: The LLM generates output based on both the query and the retrieved documents1.
+
 This project demonstrates how to implement a RAG using Langchain in node.js. The RAG system enhances text generation models by incorporating relevant information retrieved from external knowledge sources like a PDF document. It uses the information to augment the responses genereated by the language model.
 
 ## Requirements
